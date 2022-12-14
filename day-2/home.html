@@ -58,6 +58,130 @@
         color: white;
         text-decoration: none;
     }
+    #bcc_image{
+        /* border:1px solid red; */
+       background-image: url(https://forever.travel-assets.com/flex/flexmanager/images/2021/11/01/ORB_Storefront_6_imgB_1400x600_20211028.jpg?impolicy=fcrop&w=900&h=225&q=mediumHigh);
+       background-size: contain;
+       width:100%;
+       height:380px;
+      position: absolute;
+    }
+   #calendor{
+    margin: auto;
+    width:77%;
+    border: 1px solid red;
+    height:280px;
+   padding-top: 30px;
+    margin-top: 25px;
+    box-shadow: rgba(0, 0, 0, 0.25) 0px 54px 55px, rgba(0, 0, 0, 0.12) 0px -12px 30px, rgba(0, 0, 0, 0.12) 0px 4px 6px, rgba(0, 0, 0, 0.17) 0px 12px 13px, rgba(0, 0, 0, 0.09) 0px -3px 5px;
+    background-color: white;
+   }
+   #calendor>div:nth-child(1){
+    width:40%;
+    margin: auto;
+    display: flex;
+    /* border:1px solid red; */
+   justify-content: space-between;
+   margin-bottom: 15px;
+   }
+   #calendor>div>p{
+    text-align: center;
+    font-family: Arial, Helvetica, sans-serif;
+    color: rgb(76, 73, 73);
+    font-size: 14px;
+   }
+   #frist{
+    width:95%;
+    margin: auto;
+   }
+   #input{
+    width: 100%;
+    /* border:1px solid red; */
+   }
+   #input>input:nth-child(1){
+    width:37%;
+    margin-left: 50px;
+    padding: 12px 0px;
+    margin-top: 20px;
+    font-size: 17px;
+    padding-left: 20px;
+   }
+   #input>input:nth-child(2){
+    width:15%;
+    margin-left: 10px;
+    padding: 12px 0px;
+    margin-top: 20px;
+    font-size: 17px;
+    padding-left: 20px;
+   }
+   #input>input:nth-child(3){
+    width:15%;
+    margin-left: 10px;
+    padding: 12px 0px;
+    margin-top: 20px;
+    font-size: 17px;
+    padding-left: 20px;
+   }
+   #last{
+    width:21%;
+    display: inline-block;
+    border:1px solid grey;
+    margin-left: 10px;
+    padding-left: 20px;
+    font-family: Arial, Helvetica, sans-serif;
+    margin-bottom: 10px;
+    padding: 1px 0px;
+   }
+   #last>p{
+    font-size: 13px;
+    line-height: 14px;
+    font-family: Arial, Helvetica, sans-serif;
+   color: rgb(91, 88, 88);
+   padding-left: 20px;
+   }
+   #last>div{
+    height:30px;
+    font-size: 16px;
+    padding: 0px 0px 17px 0px;
+    font-size: 17px;
+   /* line-height:15px; */
+   padding-left: 20px;
+    display: flex;
+   
+   }
+   #end{
+    margin-left: 50px;
+    margin-top: 5px;
+   }
+   #end input{
+    width:20px;
+    height:40px;
+    vertical-align:middle;
+    font-family: Arial, Helvetica, sans-serif;
+   }
+   #end>span{
+    margin-left: 10px;
+    font-family: Arial, Helvetica, sans-serif;
+    color:rgb(98, 95, 95)
+   }
+   #end>input+span+input{
+    margin-left: 70px;
+   }
+   #button{
+    display: block;
+    margin: auto;
+    padding:14px 60px;
+    background-color:rgb(233, 53, 95);
+    border:0px;
+    color:white;
+    font-size: 15px;
+   }
+   #card{
+    display: flex;
+   }
+   #card>div{
+    display: flex;
+   }
 </style>
 <body>
     <div id="navbar">
@@ -75,11 +199,51 @@
     </form>
        </div>
     </div>
+    <div id="bcc_image">
+       <div id="calendor">
+         <div>
+            <p>Stays</p>
+            <p>Flights</p>
+            <p>Cars</p>
+            <p>Packages</p>
+            <p>Things to do</p>
+            <p>Cruises</p>
+         </div>
+         <hr id="frist">
+         <div id="input">
+            <input type="text" value="Going to">
+            <input type="date" value="Cheak in" placeholder="cheak-in">
+            <input type="date" value="Cheak in" placeholder="cheak-in">
+            <div id="last">
+                <p>Travelers</p>
+                <div>
+                <p>1 room, 2 travelers</p>
+                </div>
+            </div>
+         </div>
+         <div id="end">
+            <input type="checkbox"><span>Add a flight</span>
+            <input type="checkbox"><span>Add a car</span>
+        </div>
+        <button id="button">Search</button>
+        </div>
+    </div>
+    <div id="card">
+        <div>
+            <!-- <img src="https://forever.travel-assets.com/flex/flexmanager/images/2022/02/09/ORB_BrandPromise_TravelAsYouAre_imgB_840x473_20220207.jpg?impolicy=fcrop&w=900&h=386&q=mediumHigh"> -->
+            <div>
+                <h1>TRAVEL AS YOU ARE</h1>
+                <p>Find LGBTQ-welcoming hotels using our new search filter.</p>
+            </div>
+        </div>
+        <div></div>
+        <div></div>
+    </div>
 </body>
 <script>
-   let signin= document.getElementById("sign_in");
-   signin.addEventListener("click",function(){
+//    let signin= document.getElementById("sign_in");
+//    signin.addEventListener("click",function(){
     
-   })
+//    })
 </script>
 </html>
