@@ -1,0 +1,85 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<style>
+     *{
+        margin: 0;
+        padding: 0;
+        box-sizing: border-box;
+    }
+    #navbar{
+        display:flex;
+        width: 100%;
+        justify-content: space-around;
+        background-color:rgb(10, 51, 73); ;
+    }
+    #navbar>div{
+        display: flex;
+        /* background-color:rgb(10, 51, 73); */
+        height:70px;
+        /* border: 1px solid red; */
+        width:40%;
+    }
+    #navbar>div:nth-child(1){
+        padding-left: 5%;
+    }
+    #navbar>div:nth-child(2){
+      
+        margin-left: 16%;
+    }
+    #navbar>div:nth-child(2) form{
+        width:70%;
+        display: flex;
+        color: white;
+        justify-content: space-between;
+        /* border:1px solid red; */
+        margin-top: 5%;
+        margin-left: 4%;
+        font-family: Arial, Helvetica, sans-serif;
+        font-size: 14px;
+    }
+    #navbar>div>img{
+        margin-left: 14%;
+        width:30%;
+    }
+    #navbar>div>p{
+        color:white;
+        margin-left: 6%;
+        margin-top: 5%;
+        font-family: Arial, Helvetica, sans-serif;
+        font-size: 14px;
+    }
+    #sign_in{
+        color: white;
+        text-decoration: none;
+    }
+</style>
+<body>
+    <div id="navbar">
+       <div>
+        <img src="https://www.orbitz.com/_dms/header/logo.svg?locale=en_US&siteid=70201&2">
+        <p>More travel</p>
+        </div>
+       <div>
+        <form id="form">
+        <p>Espanol</p>
+        <p>List your property</p>
+        <p>support</p>
+        <p>Trips</p>
+        <a id="sign_in" href="/irate-blow-2868/day-2/signup_signin.html">Sign in</a>
+    </form>
+       </div>
+    </div>
+</body>
+<script>
+   let signin= document.getElementById("sign_in");
+   signin.addEventListener("click",function(){
+    
+   })
+</script>
+</html>

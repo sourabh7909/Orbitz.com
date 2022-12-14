@@ -1,0 +1,181 @@
+<!DOCTYPE html>
+<html lang="en">
+   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.2.1/css/all.min.css">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>sign in</title>
+</head>
+<style>
+    *{
+    margin: 0;
+    padding: 0;
+    }
+#top{
+    display: flex;
+    }
+#top>a{
+    display: block;
+    color:teal;
+    font-weight: 600;
+    font-size: 20px;
+    margin-left: 10px;
+    padding-top: 10px;
+}
+hr{
+    margin-top: 10px;
+    color:rgb(178, 45, 45);
+    font-weight: 0.5px;
+}
+#top>img{
+    width: 10%;
+    display: block;
+    margin: auto;
+    margin-top: 10px;
+}
+#bottom{
+width:27%;
+height:600px;
+margin: auto;
+margin-top: 30px;
+/* border: 1px solid red; */
+}
+#bottom>h1+input{
+    margin-top: 20px;
+    width:95%;
+    padding: 10px 0px;
+    font-size: 16px;
+    padding-left: 10px;
+}
+#bottom>h1+input+input{
+    margin-top: 13px;
+    width:95%;
+    padding: 10px 0px;
+    font-size: 16px;
+    padding-left: 10px;
+}
+#bottom>h1{
+    font-family: Arial, Helvetica, sans-serif;
+    font-size: 28px;
+}
+#bottom>input+input+input{
+    margin-top: 10px;
+   height:40px;
+    width:20px;
+}
+#bottom>input+input+input+span{
+    color: rgb(74, 71, 71);
+    /* border:1px solid red; */
+    display: inline-block;
+    vertical-align: middle;
+    margin-bottom: 30px;
+}
+#bottom>span+p{
+    font-size: 13px;
+    font-family: Arial, Helvetica, sans-serif;
+    color: rgb(85, 81, 81);
+    margin-bottom: 25px;
+}
+#bottom>a{
+    font-size: 14px;
+    font-family: Arial, Helvetica, sans-serif;
+}
+#bottom>a span{
+    color:rgb(13, 167, 167);
+    font-size: 14px;
+    font-family: Arial, Helvetica, sans-serif;
+}
+#bottom>button{
+    display: block;
+    margin: auto;
+    width: 100%;
+    padding: 14px 0px;
+    margin-top: 25px;
+    background-color:rgb(233, 53, 95);
+    border: 0px;
+}
+#bottom>button+a{
+   /* border: 1px solid red; */
+   display: block;
+   text-align: center;
+    margin-top: 20px;
+    color: teal;
+}
+#create{
+    margin-top: 25px;
+    text-align: center;
+    font-family: Arial, Helvetica, sans-serif;
+    color:rgb(87, 84, 84);
+    font-size: 14px;
+}
+#create a{
+    color: teal;
+    text-decoration: none;
+    font-family: Arial, Helvetica, sans-serif;
+}
+#create+p{
+    font-size: 13.5px;
+    font-family: Arial, Helvetica, sans-serif;
+    text-align: center;
+    margin-top: 30px;
+    color:rgb(87, 84, 84);
+}
+#image{
+    width:20%;
+    display: flex;
+    margin: auto;
+    margin-top: 20px;
+    /* border:1px solid red; */
+    text-align: center;
+}
+#image>img{
+    margin: auto;
+    display: block;
+    width:20%;
+    text-align: center;
+}
+</style>
+<body>
+  <div id="top">
+    <a href="/irate-blow-2868/day-2/home.html"><i class="fa-solid fa-arrow-left"></i></a>
+    <img src="https://www.orbitz.com/_dms/interstitial/logo.svg?locale=en_US&siteid=70201">
+  </div>
+  <hr>
+  <div id="bottom">
+    <h1>Sign in</h1>
+    <input type="email" id="email" placeholder="Email address">
+    <input type="password" id="password" placeholder="Password">
+    <input type="checkbox">
+    <span>Keep me signed in</span>
+    <p>Selecting this checkbox will keep you signed into your account on this device until you sign out. Do not select this on shared devices.</p>
+    <a>By signing in, I agree to the Orbitz <span>Terms and Conditions, Privacy Statement and Orbitz Rewards Terms and Conditions.</span></a>
+    <button id="button">Sign in</button>
+    <a href="">Forgot password?</a>
+    <p id="create">Don't have an account?<a href="/irate-blow-2868/day-2/create_account.html">Create one</a></p>
+    <p>or continue with</p>
+    <div id="image">
+        <img src="https://a.travel-assets.com/egds/marks/apple.svg">
+        <img src="https://a.travel-assets.com/egds/marks/facebook.svg">
+    </div>
+  </div>
+ 
+
+</body>
+<script>
+
+let button=document.getElementById("button");
+button.addEventListener("click",function(){
+  let signindata={
+    email:document.getElementById("email"),
+    password:document.getElementById
+  }
+})
+
+    let createdata=JSON.parse(localStorage.getItem("create_account"))||[];
+   
+  createdata.forEach((element,index)=>{
+   
+  })
+</script>
+</html>
