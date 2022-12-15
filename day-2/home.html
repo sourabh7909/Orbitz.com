@@ -64,7 +64,7 @@
        background-size: contain;
        width:100%;
        height:380px;
-      position: absolute;
+       position:absolute;
     }
    #calendor{
     margin: auto;
@@ -72,7 +72,7 @@
     border: 1px solid red;
     height:280px;
    padding-top: 30px;
-    margin-top: 25px;
+    margin-top: 55px;
     box-shadow: rgba(0, 0, 0, 0.25) 0px 54px 55px, rgba(0, 0, 0, 0.12) 0px -12px 30px, rgba(0, 0, 0, 0.12) 0px 4px 6px, rgba(0, 0, 0, 0.17) 0px 12px 13px, rgba(0, 0, 0, 0.09) 0px -3px 5px;
     background-color: white;
    }
@@ -177,11 +177,102 @@
     font-size: 15px;
    }
    #card{
+    width:78%;
     display: flex;
+    margin-top: 450px;
+    /* position: sticky; */
+    margin-left: 166px;
+    justify-content: space-between;
+    margin-bottom: 40px;
    }
    #card>div{
-    display: flex;
+    width: 32%;
+    box-shadow: rgb(38, 57, 77) 0px 20px 30px -10px;
    }
+   #card>div>img{
+    width:100%;
+   }
+   #card+h1{
+    margin-left: 11%;
+    font-family: Arial, Helvetica, sans-serif;
+  }
+  #for{
+    width:78%;
+    display: flex;
+    margin: auto;
+    justify-content: space-between;
+    position: relative;
+    margin-bottom: 40px;
+    
+  }
+  #for>div{
+    width:23.5%;
+  }
+  #for>div>img{
+    width:100%;
+  }
+  #heading{
+    position: absolute;
+    top:65%;
+    color:white;
+    text-align: center;
+    /* border:1px solid red; */
+    margin-left: 1.3%;
+    font-family: Arial, Helvetica, sans-serif;
+    font-size: 28px;
+  }
+  #banner{
+    position: absolute;
+    top:85%;
+    color:white;
+    margin-left: 1.3%;
+    font-family: Arial, Helvetica, sans-serif;
+    font-size: 15px;
+  }
+  #for>div:nth-child(2) h1{
+    width:20%;
+    /* border:1px solid red; */
+    top:52%;
+  }
+  #add{
+    width:78%;
+    margin: auto;
+    /* border: 1px solid red; */
+    display: flex;
+  }
+  #add>div{
+    width: 100%;
+  }
+  #add>div>img{
+    width:100%;
+    height:200px;
+    display: block;
+  }
+  #add>div:nth-child(2){
+   width:70%;
+   /* border: 1px solid black; */
+   font-family: Arial, Helvetica, sans-serif;
+   padding-left: 15px;
+   box-shadow: rgba(0, 0, 0, 0.35) 0px 5px 15px;
+  }
+  #add>div:nth-child(2) img{
+  margin:60px 0px 0px 0px;
+  width:13%;
+  height:12%;
+  }
+  #add>div:nth-child(2) h3{
+   margin-top: 20px;
+   line-height: 40px;
+  }
+  #add>div:nth-child(2) p{
+   color:rgb(105, 103, 103);
+  }
+  #water{
+    width:78%;
+  }
+  #water>div>img{
+    width:60%;
+  }
 </style>
 <body>
     <div id="navbar">
@@ -228,16 +319,55 @@
         <button id="button">Search</button>
         </div>
     </div>
+    
     <div id="card">
         <div>
-            <!-- <img src="https://forever.travel-assets.com/flex/flexmanager/images/2022/02/09/ORB_BrandPromise_TravelAsYouAre_imgB_840x473_20220207.jpg?impolicy=fcrop&w=900&h=386&q=mediumHigh"> -->
-            <div>
-                <h1>TRAVEL AS YOU ARE</h1>
-                <p>Find LGBTQ-welcoming hotels using our new search filter.</p>
-            </div>
+            <img src="https://forever.travel-assets.com/flex/flexmanager/images/2022/02/09/ORB_BrandPromise_TravelAsYouAre_imgB_840x473_20220207.jpg?impolicy=fcrop&w=900&h=386&q=mediumHigh">
         </div>
-        <div></div>
-        <div></div>
+        <div>
+            <img src="https://forever.travel-assets.com/flex/flexmanager/images/2022/02/09/ORB_BrandPromise_Rewards_imgB_840x473_20220207.jpg?impolicy=fcrop&w=900&h=386&q=mediumHigh">
+        </div>
+        <div>
+            <img src="https://forever.travel-assets.com/flex/flexmanager/images/2022/02/09/ORB_BrandPromise_InsiderPrices_imgB_840x473_20220207.jpg?impolicy=fcrop&w=900&h=386&q=mediumHigh">
+        </div>
+    </div>
+    <h1>Featured offers</h1>
+    <div id="for">
+         <div>
+            <img src="https://forever.travel-assets.com/flex/flexmanager/images/2021/11/02/ORB_Storefront_LastMinute_imgB_900x600_20211101.jpg?impolicy=fcrop&w=900&h=600&q=mediumHigh">
+            <h1 id="heading">Last-minute deals</h1>
+            <p id="banner">Getaway today</p>
+         </div>
+         <div>
+            <img src="https://forever.travel-assets.com/flex/flexmanager/images/2021/11/02/ORB_Storefront_AllInclusive_imgB_900x600_20211101.jpg?impolicy=fcrop&w=900&h=600&q=mediumHigh">
+            <h1 id="heading">All-inclusive resorts</h1>
+            <p id="banner">Enjoy sun and fun</p>
+         </div>
+         <div>
+            <img src="https://forever.travel-assets.com/flex/flexmanager/images/2021/11/02/ORB_Storefront_MOD_imgB_900x600_20211101.jpg?impolicy=fcrop&w=900&h=600&q=mediumHigh">
+            <h1 id="heading">Insider Prices</h1>
+            <p id="banner">Members get rewarded</p>
+         </div>
+         <div>
+            <img src="https://forever.travel-assets.com/flex/flexmanager/images/2021/11/02/ORB_Storefront_JetAndReset_imgB_900x600_20211101.jpg?impolicy=fcrop&w=900&h=600&q=mediumHigh">
+            <h1 id="heading">Jet and reset</h1>
+            <p id="banner">Fly somewhere beachy and warm</p>
+         </div>
+    </div>
+    <div id="add">
+        <div>
+        <img src="https://media.gettyimages.com/id/183765619/photo/green-fields-and-mounatins.jpg?s=612x612&w=gi&k=20&c=PYnL9egfdah6yHAAoQmzaJfCC3syxaXoIRxcfvDOTIY=">
+       </div>
+       <div>
+       <img src="https://forever.travel-assets.com/flex/flexmanager/images/2021/06/03/284284_v2_279x100_26448_Thrifty.png">
+       <h3>Spend less.Adventure more.</h3>
+       <p>Cruise far in a great car,with a great rate.</p>
+       </div>
+    </div>
+    <div id="water">
+        <div>
+            <img src="https://forever.travel-assets.com/flex/flexmanager/images/2020/09/25/15ORB_GeoTargeted_Chicago_mrq_1320x742_20200525.jpg?impolicy=fcrop&w=900&h=506&q=mediumHigh">
+        </div>
     </div>
 </body>
 <script>
