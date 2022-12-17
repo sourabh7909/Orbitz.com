@@ -50,7 +50,8 @@
             <input type="checkbox"><span>Add a flight</span>
             <input type="checkbox"><span>Add a car</span>
         </div>
-        <button id="button">Search</button>
+        
+        <button id="button"><a href="/irate-blow-2868/day-2/allhotel.html">Search</a></button>
         </div>
     </div>
     
@@ -244,7 +245,20 @@
     </div>
 </body>
 <script>
- 
+ let bag=[]
+    let url="https://63981697fe03352a94c46c3d.mockapi.io/products"
+    fetch(url)
+    .then((res)=>res.json())
+    .then((data)=>{
+    bag=[...data]
+    console.log(bag)
+   
+  
+    })
+    .catch((err)=>console.log(err))
+
+
+ function refreshva(){
   let data=[]
   let search=document.getElementById("button");
   search.addEventListener("click",function(){
@@ -255,8 +269,28 @@
     second_date:document.getElementById("input3").value,
    }
    data.push(inputdata)
-  localStorage.setItem("location_data",JSON.stringify(data))
+ 
+  
+  data.forEach((el)=>{
+    let value=el.loction
+    console.log(value)
+    let new_arr=[]
+    let do_filter=bag.filter((el)=>{
+     
+      if(value==el.city){
+        new_arr.push(el)
+       localStorage.setItem("bag_datas",JSON.stringify(new_arr));
+      
+     }
+     
+    })
+
   })
-   
+  })
+
+ }
+ refreshva()
+
+ 
 </script>
 </html>

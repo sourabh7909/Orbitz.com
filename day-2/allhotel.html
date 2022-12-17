@@ -7,6 +7,10 @@
     <title>Document</title>
 </head>
 <style>
+    body{
+    background-color:rgb(203, 178, 37);
+    
+    }
    #container{
     width:60%;
     margin: auto;
@@ -14,6 +18,7 @@
    grid-template-columns: repeat(2,1fr);
    gap: 20px;
    font-family: Arial, Helvetica, sans-serif;
+   background-color: white;
    }
    #container>div+h2{
     color:teal;
@@ -21,38 +26,26 @@
    #container>div{
     box-shadow: rgba(0, 0, 0, 0.35) 0px 5px 15px;
     padding: 20px;
+    background-color: white;
    }
    #container>div>img{
     width: 100%;
    }
 </style>
 <body>
-    <select id="filter">
-        <option  value="">select</option>
-        <option id="bhopal" value="Bhopal"> Bhopal</option>
-        <option id="indore" value="indore"> indore</option>
-        <option id="mumbai" value="mumbai"> mumbai</option>
-        <option id="delhi" value="delhi"> Delhi</option>
-    </select>
+   
     <div id="container">
     
     </div>
 </body>
 
 <script>
-    let bag=[]
-    let url="https://63981697fe03352a94c46c3d.mockapi.io/products"
-    fetch(url)
-    .then((res)=>res.json())
-    .then((data)=>{
-    bag=[...data]
-    console.log(bag)
-    // handlefilter(bag)
-   show(bag)
-    })
-    .catch((err)=>console.log(err))
+let con=document.getElementById("container");
+let data=JSON.parse(localStorage.getItem("bag_datas"))||[];
+console.log(data)
+show(data)
 
-    let con=document.getElementById("container");
+
     function show(bag){
         con.innerHTML=""
     bag.forEach((el,index)=>{
@@ -80,17 +73,113 @@
        refund.innerText=el.refund;
        refund.style.color="teal"
 
+       let reverse=document.createElement("p");
+       reverse.innerText=el.reverse;
 
-    
+       let rating=document.createElement("p");
+       rating.innerText=el.rating;
 
-     div1.append(image,name,city,price,total,inclued,refund)
-    //  div2.append(city)
+       let button=document.createElement("button");
+       button.innerText=el.button;
+       button.style.display="block"
+       button.style.margin="auto"
+       button.style.backgroundColor="rgb(233, 53, 95)"
+       button.style.color="white"
+       button.style.border="0px"
+       button.style.padding="5px 15px 5px 15px"
+       
+       button.addEventListener("click",function(){
+       
+        let image=document.createElement("img");
+        image.setAttribute("src","https://gifimage.net/wp-content/uploads/2018/04/page-loading-gif-13.gif");
+        image.style.width="40px"
+        image.style.height="50px"
+        image.style.display="block"
+        image.style.margin="auto"
+        image.style.marginTop="10px"
+       div1.append(image)
+        
+
+        function gotonext(){
+            window.location="http://127.0.0.1:5501/irate-blow-2868/day-2/payment.html"
+        }
+        setTimeout('gotonext()',3000)
+       })
     
+       
+     
+
+     div1.append(image,name,city,price,total,inclued,refund,reverse,rating,button)
+   
      con.append(div1)
 
      
     })
     }
+
+    function gotonext(){
+            window.location="http://127.0.0.1:5501/irate-blow-2868/day-2/payment.html"
+        }
+        setTimeout('gotonext()',100000)
+    
+
+//     let bag=[]
+//     let url="https://63981697fe03352a94c46c3d.mockapi.io/products"
+//     fetch(url)
+//     .then((res)=>res.json())
+//     .then((data)=>{
+//     bag=[...data]
+//     // console.log(bag)
+//     // handlefilter(bag)
+//    show(bag)
+//     })
+//     .catch((err)=>console.log(err))
+
+//     let con=document.getElementById("container");
+//     function show(bag){
+//         con.innerHTML=""
+//     bag.forEach((el,index)=>{
+//        let div1=document.createElement("div");
+
+//        let image=document.createElement("img");
+//        image.setAttribute("src",el.avatar);
+       
+//        let name=document.createElement("h2");
+//        name.innerText=el.name;
+
+//        let city=document.createElement("p");
+//        city.innerText=el.city;
+
+//        let price=document.createElement("h2");
+//        price.innerText=el.price;
+
+//        let total=document.createElement("p");
+//        total.innerText=el.total;
+
+//        let inclued=document.createElement("p");
+//        inclued.innerText=el.include;
+
+//        let refund=document.createElement("p");
+//        refund.innerText=el.refund;
+//        refund.style.color="teal"
+
+//        let reverse=document.createElement("p");
+//        reverse.innerText=el.reverse;
+
+//        let rating=document.createElement("p");
+//        rating.innerText=el.rating;
+     
+
+    
+
+//      div1.append(image,name,city,price,total,inclued,refund,reverse,rating)
+//     //  div2.append(city)
+    
+//      con.append(div1)
+
+     
+//     })
+//     }
 
 
 // let new_arr=[]
@@ -128,23 +217,48 @@
 
 
 
-let new_arr=[]
+// let new_arr=[]
 
- let data=JSON.parse(localStorage.getItem("location_data"))||[]
- data.forEach((el)=>{
-  new_arr=el.loction;
+//  let data=JSON.parse(localStorage.getItem("location_data"))||[]
+//  data.forEach((el)=>{
+//   new_arr=el.loction;
  
- });
-console.log(new_arr)
- if(new_arr=""){
-    show(bag)
- }else{
-    let do_filter=bag.filter((ele)=>{
-            return ele.city==new_arr;
-    })
+//  });
+// console.log(new_arr)
+//  if(new_arr=""){
+//     show(bag)
+//  }else{
+//     let do_filter=bag.filter((ele)=>{
+//             return ele.city==new_arr;
+//     })
     
-    show(do_filter)
- }
+//     show(do_filter)
+//  }
+
+
+
+
+
+//  let new_arr=[]
+
+//  let data=JSON.parse(localStorage.getItem("location_data"))||[]
+//  data.forEach((el)=>{
+//   new_arr=el.loction;
+ 
+//  });
+// console.log(new_arr)
+//  if(new_arr="indore"){
+//   let a=  bag.filter((el)=>{
+//      el.city==new_arr
+//   })
+//  show(a)
+// //  }else{
+// //     let do_filter=bag.filter((ele)=>{
+// //             return ele.city==new_arr;
+// //     })
+    
+// //     show(do_filter)
+// }
 </script>
 
 

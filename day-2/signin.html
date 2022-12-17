@@ -135,6 +135,20 @@ margin-top: 30px;
     width:20%;
     text-align: center;
 }
+#anotherpage{
+    display: block;
+    margin: auto;
+    margin-top: 20px;
+    /* text-align: center; */
+    /* color:teal; */
+    /* font-style: italic; */
+    height:20px;
+    width:20px;
+}
+#anotherpage>img{
+    width:45px;
+    height:60px;
+}
 </style>
 <body>
   <div id="top">
@@ -142,6 +156,9 @@ margin-top: 30px;
     <img src="https://www.orbitz.com/_dms/interstitial/logo.svg?locale=en_US&siteid=70201">
   </div>
   <hr>
+  <div id="anotherpage">
+
+  </div>
   <div id="bottom">
     <h1>Sign in</h1>
     <input type="email" id="email" placeholder="Email address">
@@ -179,30 +196,42 @@ margin-top: 30px;
 function working(){
 let button=document.getElementById("button");
 button.addEventListener("click",function(){
-   
-   
     let signindata={
     email:document.getElementById("email").value,
     password:document.getElementById("password").value
  }
 
+
  
  let createdata=JSON.parse(localStorage.getItem("create_account"))||[];
 createdata.forEach((el,i)=>{
     if(el.email === signindata.email && el.password===signindata.password){
-    alert("Login successful 😍")
+       let cc= document.createElement("div");
+    // alert("Login successful 😍")
+    let image=document.createElement("img");
+image.setAttribute("src","https://gifimage.net/wp-content/uploads/2018/04/page-loading-gif-13.gif")
+ 
+let another=document.getElementById("anotherpage");
+another.append(image)
+
+    function redirectpage(){
+    window.location="http://127.0.0.1:5501/irate-blow-2868/day-2/Home.html";
+}
+setTimeout('redirectpage()',3000)
+
    
 }else {
-    alert("please fill correct email or password🙄")
+   alert("please fill correct email or password")
 }
-   
 })
   })
 }
 working()
 
-
-
+function redirectpage(){
+    window.location="http://127.0.0.1:5501/irate-blow-2868/day-2/Home.html";
+}
+setTimeout('redirectpage()',100000)
 
 </script>
 </html>

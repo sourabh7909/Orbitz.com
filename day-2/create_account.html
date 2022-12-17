@@ -106,6 +106,7 @@ margin-top: 30px;
     margin-top: 25px;
     background-color:rgb(233, 53, 95);
     border: 0px;
+    color:white;
 }
 #bottom>button+a{
    /* border: 1px solid red; */
@@ -148,10 +149,18 @@ margin-top: 30px;
     text-align: center;
 }
 #show{
+    display: block;
+    margin: auto;
     margin-top: 20px;
-    text-align: center;
-    color:crimson;
-    font-style: italic;
+    /* text-align: center; */
+    /* color:teal; */
+    /* font-style: italic; */
+    height:20px;
+    width:20px;
+}
+#show>img{
+    width:45px;
+    height:60px;
 }
 </style>
 <body>
@@ -160,7 +169,9 @@ margin-top: 30px;
     <img src="https://www.orbitz.com/_dms/interstitial/logo.svg?locale=en_US&siteid=70201">
   </div>
   <hr>
-  <h1 id="show"></h1>
+  <div id="show">
+
+  </div>  
   <div id="bottom">
     <h1>Create an account</h1>
     <input type="email" id="email" placeholder="Email address">
@@ -173,7 +184,7 @@ margin-top: 30px;
     <span>Keep me signed in</span>
     <p>Selecting this checkbox will keep you signed into your account on this device until you sign out. Do not select this on shared devices.</p>
     <a>By creating an account, I agree to the Orbitz <span>Terms and Conditions, Privacy Statement and Orbitz Rewards Terms and Conditions.</span></a>
-    <button id="button">Sign in</button>
+    <button id="button">Continue</button>
     <a href="">Forgot password?</a>
     <p id="create">Don't have an account?<a href="/irate-blow-2868/day-2/signin.html">Sign in</a></p>
     <p>or continue with</p>
@@ -189,8 +200,14 @@ margin-top: 30px;
 let button=document.getElementById("button");
 let show=document.getElementById("show");
 button.addEventListener("click",function(){
-
-show.innerText="Signup successfull 👍"
+ let image=document.createElement("img")
+ image.setAttribute("src","https://gifimage.net/wp-content/uploads/2018/04/page-loading-gif-13.gif")
+ show.append(image)
+ 
+ function redirectpage(){
+    window.location="http://127.0.0.1:5501/irate-blow-2868/day-2/signin.html";
+}
+setTimeout('redirectpage()',2000)
     let dataarr=[];
     let createdata={
     email: document.getElementById("email").value,
@@ -201,5 +218,11 @@ show.innerText="Signup successfull 👍"
 dataarr.push(createdata)
 localStorage.setItem("create_account",JSON.stringify(dataarr))
 });
+
+
+function redirectpage(){
+    window.location="http://127.0.0.1:5501/irate-blow-2868/day-2/signin.html";
+}
+setTimeout('redirectpage()',50000)
 </script>
 </html>
