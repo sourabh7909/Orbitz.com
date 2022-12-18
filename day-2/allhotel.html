@@ -1,0 +1,554 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<style>
+    body{
+    background-color:rgb(203, 178, 37);
+    
+    }
+   #container{
+    width:60%;
+    margin: auto;
+   display: grid;
+   grid-template-columns: repeat(2,1fr);
+   gap: 20px;
+   font-family: Arial, Helvetica, sans-serif;
+   background-color: white;
+   }
+   #container>div+h2{
+    color:teal;
+   }
+   #container>div{
+    box-shadow: rgba(0, 0, 0, 0.35) 0px 5px 15px;
+    padding: 20px;
+    background-color: white;
+   }
+   #container>div>img{
+    width: 100%;
+   }
+</style>
+<body>
+   
+    <div id="container">
+    
+    </div>
+</body>
+
+<script>
+let con=document.getElementById("container");
+let data=JSON.parse(localStorage.getItem("bag_datas"))||[];
+console.log(data)
+show(data)
+
+
+    function show(bag){
+        con.innerHTML=""
+    bag.forEach((el,index)=>{
+       let div1=document.createElement("div");
+
+       let image=document.createElement("img");
+       image.setAttribute("src",el.avatar);
+       
+       let name=document.createElement("h2");
+       name.innerText=el.name;
+
+       let city=document.createElement("p");
+       city.innerText=el.city;
+
+       let price=document.createElement("h2");
+       price.innerText=el.price;
+
+       let total=document.createElement("p");
+       total.innerText=el.total;
+
+       let inclued=document.createElement("p");
+       inclued.innerText=el.include;
+
+       let refund=document.createElement("p");
+       refund.innerText=el.refund;
+       refund.style.color="teal"
+
+       let reverse=document.createElement("p");
+       reverse.innerText=el.reverse;
+
+       let rating=document.createElement("p");
+       rating.innerText=el.rating;
+
+       let button=document.createElement("button");
+       button.innerText=el.button;
+       button.style.display="block"
+       button.style.margin="auto"
+       button.style.backgroundColor="rgb(233, 53, 95)"
+       button.style.color="white"
+       button.style.border="0px"
+       button.style.padding="5px 15px 5px 15px"
+       
+       button.addEventListener("click",function(){
+       
+        let image=document.createElement("img");
+        image.setAttribute("src","https://gifimage.net/wp-content/uploads/2018/04/page-loading-gif-13.gif");
+        image.style.width="40px"
+        image.style.height="50px"
+        image.style.display="block"
+        image.style.margin="auto"
+        image.style.marginTop="10px"
+       div1.append(image)
+        
+
+        function gotonext(){
+            window.location="http://127.0.0.1:5501/irate-blow-2868/day-2/payment.html"
+        }
+        setTimeout('gotonext()',3000)
+       })
+    
+       
+     
+
+     div1.append(image,name,city,price,total,inclued,refund,reverse,rating,button)
+   
+     con.append(div1)
+
+     
+    })
+    }
+
+    function gotonext(){
+            window.location="http://127.0.0.1:5501/irate-blow-2868/day-2/payment.html"
+        }
+        setTimeout('gotonext()',100000)
+    
+
+//     let bag=[]
+//     let url="https://63981697fe03352a94c46c3d.mockapi.io/products"
+//     fetch(url)
+//     .then((res)=>res.json())
+//     .then((data)=>{
+//     bag=[...data]
+//     // console.log(bag)
+//     // handlefilter(bag)
+//    show(bag)
+//     })
+//     .catch((err)=>console.log(err))
+
+//     let con=document.getElementById("container");
+//     function show(bag){
+//         con.innerHTML=""
+//     bag.forEach((el,index)=>{
+//        let div1=document.createElement("div");
+
+//        let image=document.createElement("img");
+//        image.setAttribute("src",el.avatar);
+       
+//        let name=document.createElement("h2");
+//        name.innerText=el.name;
+
+//        let city=document.createElement("p");
+//        city.innerText=el.city;
+
+//        let price=document.createElement("h2");
+//        price.innerText=el.price;
+
+//        let total=document.createElement("p");
+//        total.innerText=el.total;
+
+//        let inclued=document.createElement("p");
+//        inclued.innerText=el.include;
+
+//        let refund=document.createElement("p");
+//        refund.innerText=el.refund;
+//        refund.style.color="teal"
+
+//        let reverse=document.createElement("p");
+//        reverse.innerText=el.reverse;
+
+//        let rating=document.createElement("p");
+//        rating.innerText=el.rating;
+     
+
+    
+
+//      div1.append(image,name,city,price,total,inclued,refund,reverse,rating)
+//     //  div2.append(city)
+    
+//      con.append(div1)
+
+     
+//     })
+//     }
+
+
+// let new_arr=[]
+
+// let data=JSON.parse(localStorage.getItem("location_data"))||[]
+// data.forEach((el)=>{
+//   new_arr=el.loction
+
+//   if(new_arr==""){
+//     show(bag)
+// }else{
+//   let do_filter=  bag.filter((ele)=>{
+//         return ele.city==new_arr;
+//     })
+//     show(do_filter)
+// }
+// })
+
+// let filter=document.getElementById("filter");
+  
+// filter.addEventListener("change",function(el){
+//     let value=el.target.value;
+// console.log(value)
+//     if(value==""){
+//         show(bag)
+//     }else{
+//         do_filter=bag.filter((ele)=>{
+//             return ele.city==value;
+//         })
+//         show(do_filter)
+//     }
+// })
+
+  
+
+
+
+// let new_arr=[]
+
+//  let data=JSON.parse(localStorage.getItem("location_data"))||[]
+//  data.forEach((el)=>{
+//   new_arr=el.loction;
+ 
+//  });
+// console.log(new_arr)
+//  if(new_arr=""){
+//     show(bag)
+//  }else{
+//     let do_filter=bag.filter((ele)=>{
+//             return ele.city==new_arr;
+//     })
+    
+//     show(do_filter)
+//  }
+
+
+
+
+
+//  let new_arr=[]
+
+//  let data=JSON.parse(localStorage.getItem("location_data"))||[]
+//  data.forEach((el)=>{
+//   new_arr=el.loction;
+ 
+//  });
+// console.log(new_arr)
+//  if(new_arr="indore"){
+//   let a=  bag.filter((el)=>{
+//      el.city==new_arr
+//   })
+//  show(a)
+// //  }else{
+// //     let do_filter=bag.filter((ele)=>{
+// //             return ele.city==new_arr;
+// //     })
+    
+// //     show(do_filter)
+// }
+</script>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<!-- <script>
+    let arr=["https://images.trvl-media.com/hotels/21000000/20220000/20217700/20217670/f9ebbd2d.jpg?impolicy=resizecrop&rw=455&ra=fit","https://images.trvl-media.com/hotels/21000000/20930000/20926500/20926443/1dbd817f.jpg?impolicy=resizecrop&rw=455&ra=fit","https://images.trvl-media.com/hotels/67000000/66310000/66301100/66301043/2f029902.jpg?impolicy=resizecrop&rw=455&ra=fit","https://images.trvl-media.com/hotels/72000000/71140000/71130500/71130490/1d31de44.jpg?impolicy=resizecrop&rw=455&ra=fit","https://images.trvl-media.com/hotels/54000000/53750000/53744200/53744119/b2e08362.jpg?impolicy=resizecrop&rw=455&ra=fit","https://images.trvl-media.com/hotels/89000000/88350000/88349400/88349397/c5c0747c.jpg?impolicy=resizecrop&rw=455&ra=fit","https://images.trvl-media.com/hotels/37000000/36040000/36039000/36038972/5acd2857.jpg?impolicy=resizecrop&rw=455&ra=fit","https://images.trvl-media.com/hotels/18000000/17940000/17934200/17934192/9448198a.jpg?impolicy=resizecrop&rw=455&ra=fit","https://images.trvl-media.com/hotels/84000000/83400000/83399400/83399326/9c9cd1ed.jpg?impolicy=resizecrop&rw=455&ra=fit","https://images.trvl-media.com/hotels/37000000/36400000/36394600/36394557/67b2799f.jpg?impolicy=resizecrop&rw=455&ra=fit","https://images.trvl-media.com/hotels/37000000/36400000/36394600/36394557/67b2799f.jpg?impolicy=resizecrop&rw=455&ra=fit","https://images.trvl-media.com/hotels/88000000/87560000/87553800/87553797/aa171b05.jpg?impolicy=resizecrop&rw=455&ra=fit","https://images.trvl-media.com/hotels/37000000/36310000/36308700/36308658/f1ed32c4.jpg?impolicy=resizecrop&rw=455&ra=fit","https://images.trvl-media.com/hotels/84000000/83030000/83028900/83028830/2094afcb.jpg?impolicy=resizecrop&rw=455&ra=fit","https://images.trvl-media.com/hotels/79000000/78150000/78149200/78149123/9c3152ce.jpg?impolicy=resizecrop&rw=455&ra=fit"]
+
+
+    for(i=0;i<arr.length;i++){
+        let div1=document.createElement("div");
+        let image=document.createElement("img")
+        image.setAttribute("src",arr[i])
+
+        div1.append(image)
+        let con=document.getElementById("container")
+        con.append(div1)
+    } -->
+    <!-- // let hotel=["Bhopal","INDORE","UJJAIN","NAGPUR","NAGDA","Bhind","depalpur","Ratlam","sarangpur","mumbai","Delhi","kolkata","jaipur",]
+    // for(i=0;i<hotel.length;i++){
+    //     let div2=document.createElement("div");
+    //     let hotel_name=document.createElement("h2");
+    //     hotel_name.innerText="The Best hotel"
+    //     let city=document.createElement("p")
+    //     city.innerText=hotel[i]
+
+    //     div2.append(hotel,city)
+    //     let con=document.getElementById("container")
+    //     con.append(div2)
+    // }
+    
+</script>
+</html> -->
+
+
+
+
+
+
+
+
+<!-- {
+    
+    "name": "Pride Hotel Bhopal",
+    "city":"Kolar road",
+    "refund":"Fully refundable",
+    "avatar": "https://images.trvl-media.com/hotels/77000000/76620000/76613000/76612965/94ef9ec5.jpg?impolicy=resizecrop&rw=455&ra=fit",
+    "price": "105$",
+    "total":"124$",
+    "include":"includes taxes & fees"
+    "reverse":"Reserve now,pay later",
+    "rating":"10.6/20 Excellent (5 reviews)"
+
+
+}
+{
+    
+    "name": "Courtyard by Marriott Bhopal",
+    "city":"Maharana pratap nagar",
+    "refund":"Fully refundable",
+    "avatar": "https://images.trvl-media.com/hotels/6000000/5860000/5851100/5851096/6763bf29.jpg?impolicy=resizecrop&rw=455&ra=fit",
+    "description": "The beautiful range of Apple Naturalé that has an exciting mix of natural ingredients. With the Goodness of 100% Natural Ingredients",
+    "price": "91$",
+    "total":"101$",
+    "include":"includes taxes & fees"
+
+
+}
+{
+    
+    "name": "Taj Lakefront Bhopal",
+    "city":"Bhopal",
+    "refund":"Fully refundable",
+    "avatar": "https://images.trvl-media.com/hotels/72000000/71140000/71130500/71130490/1d31de44.jpg?impolicy=resizecrop&rw=455&ra=fit",
+    "description": "The beautiful range of Apple Naturalé that has an exciting mix of natural ingredients. With the Goodness of 100% Natural Ingredients",
+    "price": "121$",
+    "total":"143$",
+    "include":"includes taxes & fees",
+    "reverse":"Reserve now,pay later",
+    "rating":"13.6/10 Excellent (11 reviews)"
+
+}
+{
+    
+    "name": "The Fern Residency Bhopal",
+    "city":"Bhopal",
+    "refund":"Fully refundable",
+    "avatar": "https://images.trvl-media.com/hotels/42000000/41190000/41183200/41183172/d975342d.jpg?impolicy=resizecrop&rw=455&ra=fit",
+    "description": "The beautiful range of Apple Naturalé that has an exciting mix of natural ingredients. With the Goodness of 100% Natural Ingredients",
+    "price": "70$",
+    "total":"78$",
+    "include":"includes taxes & fees"
+    "reverse":"Reserve now,pay later",
+    "rating":"5.7/80 Excellent (51 reviews)"
+
+}
+{
+    
+    "name": "Radisson Bhopal",
+    "city":"indore",
+    "refund":"Fully refundable",
+    "avatar": "https://images.trvl-media.com/hotels/42000000/41190000/41183200/41183172/d975342d.jpg?impolicy=resizecrop&rw=455&ra=fit",
+    "description": "The beautiful range of Apple Naturalé that has an exciting mix of natural ingredients. With the Goodness of 100% Natural Ingredients",
+    "price": "85$",
+    "total":"95$",
+    "include":"includes taxes & fees"
+    "reverse":"Reserve now,pay later",
+    "rating":"6.3/10 Excellent (13 reviews)"
+
+}
+{
+    
+    "name": "hotel suraj palace",
+    "city":"indore",
+    "refund":"Fully refundable",
+    "avatar": "https://images.trvl-media.com/hotels/67000000/66390000/66382900/66382819/9d30e412.jpg?impolicy=resizecrop&rw=455&ra=fit",
+    "description": "The beautiful range of Apple Naturalé that has an exciting mix of natural ingredients. With the Goodness of 100% Natural Ingredients",
+    "price": "40$",
+    "total":"55$",
+    "include":"includes taxes & fees"
+    "reverse":"Reserve now,pay later",
+    "rating":"3.9/10 Excellent (7 reviews)"
+
+}
+{
+    
+    "name": "Hotel Rajhans Regent",
+    "city":"mumbai",
+    "refund":"Fully refundable",
+    "avatar": "https://images.trvl-media.com/hotels/19000000/18040000/18030300/18030258/75293734.jpg?impolicy=resizecrop&rw=455&ra=fit",
+    "description": "The beautiful range of Apple Naturalé that has an exciting mix of natural ingredients. With the Goodness of 100% Natural Ingredients",
+    "price": "60$",
+    "total":"45$",
+    "include":"includes taxes & fees"
+    "reverse":"Reserve now,pay later",
+    "rating":"9.3/10 Excellent (4 reviews)"
+
+
+}
+{
+    
+    "name": "Grand Ashirwad Beacon",
+    "city":"mumbai",
+    "refund":"Fully refundable",
+    "avatar": "https://images.trvl-media.com/hotels/18000000/17940000/17934200/17934192/9448198a.jpg?impolicy=resizecrop&rw=455&ra=fit",
+    "description": "The beautiful range of Apple Naturalé that has an exciting mix of natural ingredients. With the Goodness of 100% Natural Ingredients",
+    "price": "70$",
+    "total":"95$",
+    "include":"includes taxes & fees"
+    "reverse":"Reserve now,pay later",
+    "rating":"4.8/10 Excellent (19 reviews)"
+}
+{
+    
+    "name": "Hotel 18 Keys",
+    "city":"delhi",
+    "refund":"Fully refundable",
+    "avatar": "https://images.trvl-media.com/hotels/39000000/38940000/38936600/38936517/62aa6d73.jpg?impolicy=resizecrop&rw=455&ra=fit",
+    "description": "The beautiful range of Apple Naturalé that has an exciting mix of natural ingredients. With the Goodness of 100% Natural Ingredients",
+    "price": "50$",
+    "total":"75$",
+    "include":"includes taxes & fees"
+    "reverse":"Reserve now,pay later",
+    "rating":"3.3/10 Excellent (4 reviews)"
+}
+
+
+
+------ -->
+
+<!-- {
+    
+    "name": "Pride Hotel Bhopal",
+    "city":"Kolar road",
+    "refund":"Fully refundable",
+    "avatar": "https://images.trvl-media.com/hotels/77000000/76620000/76613000/76612965/94ef9ec5.jpg?impolicy=resizecrop&rw=455&ra=fit",
+    "description": "The beautiful range of Apple Naturalé that has an exciting mix of natural ingredients. With the Goodness of 100% Natural Ingredients",
+    "price": "105$",
+    "total":"124$",
+    "include":"includes taxes & fees"
+
+
+}
+{
+    
+    "name": "Courtyard by Marriott Bhopal",
+    "city":"Maharana pratap nagar",
+    "refund":"Fully refundable",
+    "avatar": "https://images.trvl-media.com/hotels/6000000/5860000/5851100/5851096/6763bf29.jpg?impolicy=resizecrop&rw=455&ra=fit",
+    "description": "The beautiful range of Apple Naturalé that has an exciting mix of natural ingredients. With the Goodness of 100% Natural Ingredients",
+    "price": "91$",
+    "total":"101$",
+    "include":"includes taxes & fees"
+
+
+}
+{
+    
+    "name": "Taj Lakefront Bhopal",
+    "city":"Bhopal",
+    "refund":"Fully refundable",
+    "avatar": "https://images.trvl-media.com/hotels/72000000/71140000/71130500/71130490/1d31de44.jpg?impolicy=resizecrop&rw=455&ra=fit",
+    "description": "The beautiful range of Apple Naturalé that has an exciting mix of natural ingredients. With the Goodness of 100% Natural Ingredients",
+    "price": "121$",
+    "total":"143$",
+    "include":"includes taxes & fees"
+
+
+}
+{
+    
+    "name": "The Fern Residency Bhopal",
+    "city":"Bhopal",
+    "refund":"Fully refundable",
+    "avatar": "https://images.trvl-media.com/hotels/42000000/41190000/41183200/41183172/d975342d.jpg?impolicy=resizecrop&rw=455&ra=fit",
+    "description": "The beautiful range of Apple Naturalé that has an exciting mix of natural ingredients. With the Goodness of 100% Natural Ingredients",
+    "price": "70$",
+    "total":"78$",
+    "include":"includes taxes & fees"
+
+
+}
+{
+    
+    "name": "Radisson Bhopal",
+    "city":"indore",
+    "refund":"Fully refundable",
+    "avatar": "https://images.trvl-media.com/hotels/42000000/41190000/41183200/41183172/d975342d.jpg?impolicy=resizecrop&rw=455&ra=fit",
+    "description": "The beautiful range of Apple Naturalé that has an exciting mix of natural ingredients. With the Goodness of 100% Natural Ingredients",
+    "price": "85$",
+    "total":"95$",
+    "include":"includes taxes & fees"
+
+
+}
+{
+    
+    "name": "hotel suraj palace",
+    "city":"indore",
+    "refund":"Fully refundable",
+    "avatar": "https://images.trvl-media.com/hotels/67000000/66390000/66382900/66382819/9d30e412.jpg?impolicy=resizecrop&rw=455&ra=fit",
+    "description": "The beautiful range of Apple Naturalé that has an exciting mix of natural ingredients. With the Goodness of 100% Natural Ingredients",
+    "price": "40$",
+    "total":"55$",
+    "include":"includes taxes & fees"
+
+
+}
+{
+    
+    "name": "Hotel Rajhans Regent",
+    "city":"mumbai",
+    "refund":"Fully refundable",
+    "avatar": "https://images.trvl-media.com/hotels/19000000/18040000/18030300/18030258/75293734.jpg?impolicy=resizecrop&rw=455&ra=fit",
+    "description": "The beautiful range of Apple Naturalé that has an exciting mix of natural ingredients. With the Goodness of 100% Natural Ingredients",
+    "price": "60$",
+    "total":"45$",
+    "include":"includes taxes & fees"
+
+
+}
+{
+    
+    "name": "Grand Ashirwad Beacon",
+    "city":"mumbai",
+    "refund":"Fully refundable",
+    "avatar": "https://images.trvl-media.com/hotels/18000000/17940000/17934200/17934192/9448198a.jpg?impolicy=resizecrop&rw=455&ra=fit",
+    "description": "The beautiful range of Apple Naturalé that has an exciting mix of natural ingredients. With the Goodness of 100% Natural Ingredients",
+    "price": "70$",
+    "total":"95$",
+    "include":"includes taxes & fees"
+}
+{
+    
+    "name": "Hotel 18 Keys",
+    "city":"delhi",
+    "refund":"Fully refundable",
+    "avatar": "https://images.trvl-media.com/hotels/39000000/38940000/38936600/38936517/62aa6d73.jpg?impolicy=resizecrop&rw=455&ra=fit",
+    "description": "The beautiful range of Apple Naturalé that has an exciting mix of natural ingredients. With the Goodness of 100% Natural Ingredients",
+    "price": "50$",
+    "total":"75$",
+    "include":"includes taxes & fees"
+} --> 
