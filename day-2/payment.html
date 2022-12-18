@@ -1,0 +1,221 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        body{
+            /* background-color: black; */
+        }
+        #container{
+            width:25%;
+            margin: auto;
+            /* border:1px solid red; */
+            height: 400px;
+            box-sizing: border-box;
+            background-color: rgb(131, 126, 126);;
+            border-radius: 5px;
+            margin-top: 10px;
+            /* border:1px solid red; */
+        }
+        #container>div:nth-child(1){
+            display: flex;
+            width: 100%;
+            margin: auto;
+            /* border:1px solid red; */
+            background-color:rgb(241, 235, 235);
+            padding: 6px 0px;
+            border-top-left-radius: 5px;
+            border-top-right-radius: 5px;
+        }
+       #container>div:nth-child(1) img{
+        width:44%;
+        height:10%;
+        margin-top: 1.2%;
+       }
+       #container>div:nth-child(1) p{
+         font-size: 18px;
+         margin-right:15px ;
+         line-height: 0px;
+         font-family: Arial, Helvetica, sans-serif;
+         color: rgb(94, 91, 91);
+         font-weight: 700;
+         margin-left: 20px;
+       }
+       #container>div:nth-child(2) p{
+         font-size: 15px;
+         margin-right:5px ;
+         line-height: 0px;
+         font-family: Arial, Helvetica, sans-serif;
+         color: rgb(229, 221, 221);
+         font-weight: 700;
+         margin-left: 20px;
+       }
+       #container>div:nth-child(2) input{
+        width:85%;
+         margin-left: 20px;
+         border-radius: 5px;
+         padding: 8px 0px 8px 10px;
+         border-color: rgb(64, 182, 232);
+         font-size: 16px;
+         color:rgb(87, 84, 84);
+         font-weight: 500;
+       }
+       #container>div:nth-child(3){
+        display: flex;
+       }
+       #container>div:nth-child(3) .one{
+        width:100%;
+         font-size: 15px;
+         margin-right:25px ;
+         line-height: 0px;
+         font-family: Arial, Helvetica, sans-serif;
+         color: rgb(229, 221, 221);
+         font-weight: 700;
+         margin-left: 20px;
+         /* border: 1px solid red;; */
+       }
+       #container>div:nth-child(3) #frist{
+        /* width:39%; */
+        width:100%;
+         margin-left: 20px;
+         border-radius: 5px;
+         padding: 8px 0px 8px 10px;
+         /* border-color: rgb(64, 182, 232); */
+         border-color: rgb(193, 189, 189);
+         font-size: 16px;
+         color:rgb(87, 84, 84);
+         font-weight: 500;
+       }
+       #container>div:nth-child(3) .two{
+         font-size: 15px;
+         margin-right:5px ;
+         line-height: 0px;
+         font-family: Arial, Helvetica, sans-serif;
+         color: rgb(229, 221, 221);
+         font-weight: 700;
+         margin-left: 65px;
+       }
+       #container>div:nth-child(3) #second{
+        width:54%;
+         margin-left: 57px;
+         border-radius: 5px;
+         padding: 8px 0px 8px 10px;
+         /* border-color: rgb(64, 182, 232); */
+         border-color: rgb(211, 202, 202);
+         font-size: 16px;
+         color:rgb(87, 84, 84);
+         font-weight: 500;
+       }
+       #container>div:nth-child(4) .three{
+         font-size: 15px;
+         /* margin-right:25px ; */
+         line-height: 0px;
+         font-family: Arial, Helvetica, sans-serif;
+         color: rgb(229, 221, 221);
+         font-weight: 700;
+         margin-left: 20px;
+       }
+       #container>div:nth-child(4) #third{
+        width:85%;
+         margin-left: 20px;
+         border-radius: 5px;
+         padding: 8px 0px 8px 10px;
+         border-color: grey;
+         font-size: 16px;
+         color:rgb(87, 84, 84);
+         font-weight: 500;
+         margin-bottom: 20px;
+       }
+       #btn{
+        margin-left: 0px;
+       }
+       #btn>button{
+    
+        width:87%;
+        display: block;
+        margin: auto;
+        padding: 11px 0px;
+        border-radius: 7px;
+        background-color: green;
+        color:white;
+        border:0px;
+        font-size: 18px;
+        font-weight: 700;
+        cursor: pointer;
+       }
+       #here{
+        width:90%;
+        margin: auto;
+        /* border:1px solid red; */
+       margin-top: 50px;
+       }
+       #here>img{
+        display: block;
+        margin: auto;
+        width:70px;
+        height:80px;
+       
+        /* border:1px solid red; */
+       }
+       #k+p+input{
+        border-color: gray;
+       }
+    </style>
+</head>
+<body>
+    <div id="here"></div>
+    <div id="container">
+        
+        <div>
+           <p>Payment Details</p>
+            <img src="https://tse2.mm.bing.net/th?id=OIP.TTEK1iuAIZTul5143C_nWgHaBK&pid=Api&P=0"> 
+        </div>
+       <div id="k">
+        <p>ENTER AMOUNT</p>
+        <input type="number" placeholder="">
+        <p>CARD NUMBER</p>
+        <input type="number" placeholder="Valid Card Number">
+       </div>
+
+       <div>
+        <div>
+        <p class="one">EXPIRATION DATE</p>
+        <input id="frist" type="tel" placeholder="MM/YY"></div>
+
+        <div>
+        <p class="two">CV CODE</p>
+        <input id="second" type="number" placeholder="CVC"></div>
+       </div>
+
+       <div>
+    
+        <p class="three">COUPON CODE</p>
+        <input id="third" type="number"></div>
+
+       <div id="btn"><button >Payment confrim</button></div>   
+       </div>
+    </div>
+</body>
+<script>
+    let btn=document.getElementById("btn");
+    btn.addEventListener("click",function(){
+        function wait(){
+            window.location="http://127.0.0.1:5501/irate-blow-2868/day-2/paymentimg.html";
+        }
+        setTimeout('wait()',3000)
+
+        let image=document.createElement("img");
+        image.setAttribute("src","https://gifimage.net/wp-content/uploads/2018/04/page-loading-gif-14.gif")
+        let con=document.getElementById("here");
+        con.append(image)
+    })
+
+    function wait(){
+        window.location="http://127.0.0.1:5501/irate-blow-2868/day-2/paymentimg.html";
+    }
+    setTimeout('wait()',100000)
+</script>
+</html>
